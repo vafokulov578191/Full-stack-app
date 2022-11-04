@@ -2,14 +2,12 @@ import React from 'react'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import SVGIcons from '../Components/SVGIcons'
 import Link from 'next/link'
-import PhoneIcon from '@mui/icons-material/Phone';
 import AccountMenu from '../Components/AccountMenu';
 
 type Props = {}
 
 const Layout = ({ children }) => {
     let user = []
-
 
     return (
         <div>

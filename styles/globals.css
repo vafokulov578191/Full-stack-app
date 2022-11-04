@@ -48,3 +48,12 @@ ul, li {
   padding-left: 42px;
   outline: none;
 }
+
+.swiper-button-next::after {
+  font-size: 30px !important;
+}
+
+.swiper-button-prev::after {
+  font-size: 30px !important;
+}
+

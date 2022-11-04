@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "Components/Swiper/Swiper_Header.jsx", "Components/Swiper/Swiper_Header.jsx"  ],
   "exclude": [
     "node_modules"
   ]

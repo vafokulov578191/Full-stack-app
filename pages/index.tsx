@@ -1,7 +1,13 @@
 import { Box } from '@mui/material'
 import Head from 'next/head'
+import Image from 'next/image'
 import Layout from '../Layout/Layout'
 import styles from '../styles/Home.module.css'
+import header_bgsm from '../Components/Images/Bērnu-Veikals-Banner-small-1 1.png'
+import header_bgsm2 from '../Components/Images/Bērnu-Veikals-Banner-small-2 2.png'
+import { Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header'
+import SVGIcons from '../Components/SVGIcons'
+
 
 export default function Home() {
   return (
@@ -13,7 +19,50 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Box width={'100%'} height={'100vh'}></Box>
+        <Box width={'100%'} height={'100%'}>
+          <Box width={'100%'} height={'100%'}>
+            <Box display={'flex'} gap={'25px'} width={'100%'} height={'510px'} padding={'24px 36px'}>
+              <Box display={'flex'} width={'70%'}>
+                <Swiper_Header />
+              </Box>
+              <div style={{ width: '29%', height: '100%', display: 'flex', flexDirection: 'column', gap: '24px', overflow: 'hidden' }}>
+                <Image style={{ objectFit: 'cover' }} width={525} height={220} src={header_bgsm.src} alt='alt' />
+                <Image style={{ objectFit: 'cover' }} width={525} height={220} src={header_bgsm2.src} alt='alt' />
+              </div>
+            </Box>
+            <Box display={'flex'} alignItems={'center'} width={'100%'} height={'300px'} bgcolor={'#F4F5F9'}>
+              <Box display={'flex'} width={'1670px'} margin={'0px auto'}>
+                <Swiper_Header2 />
+              </Box>
+            </Box>
+          </Box>
+
+          <Box width={'100%'} height={'100%'} display={'flex'} flexDirection={'column'}>
+            <Box width={'100%'} height={'180px'} display={'flex'} alignItems={'center'} bgcolor={'white'}>
+              <Box width={'1690px'} height={'50px'} margin={'0px auto'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px', fontWeight: '600', color: '#090F24', fontSize: '18px' }}>
+                  <SVGIcons icon='Diamond' />
+                  <span>Гарантия качества</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px', fontWeight: '600', color: '#090F24', fontSize: '18px' }}>
+                  <SVGIcons icon='Acortiment' />
+                  <span>Огромный ассортимент</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px', fontWeight: '600', color: '#090F24', fontSize: '18px' }}>
+                  <SVGIcons icon='Gruzavik' />
+                  <span>Быстрая доставка</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px', fontWeight: '600', color: '#090F24', fontSize: '18px' }}>
+                  <SVGIcons icon='Discount' />
+                  <span>Выгодные цены и бонусы</span>
+                </div>
+              </Box>
+            </Box>
+            <Box></Box>
+            <Box></Box>
+            <Box></Box>
+          </Box>
+        </Box>
       </Layout>
     </div>
   )
