@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
             <div className="main">
                 {children}
             </div>
-            <Box width={'100%'} height={'340px'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'} borderTop={'1px solid #74CCD8'}>
+            <Box fontFamily={'Noto Sans'} width={'100%'} height={'340px'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'} borderTop={'1px solid #74CCD8'}>
                 <Box width={'100%'} height={'100%'} display={'flex'}>
                     <Box width={'565px'} height={'100%'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
                         <Box width={'180px'} height={'190px'} display={'flex'} flexDirection={'column'} gap={'23px'}>
@@ -117,11 +117,47 @@ const Layout = ({ children }) => {
                             </Box>
                         </Box>
                     </Box>
-                    <Box width={'800px'} height={'100%'} borderLeft={'1px solid #74CCD8'}>
-
+                    <Box width={'800px'} height={'100%'} borderLeft={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                        <Box width={'420px'} height={'220px'} display={'flex'} flexDirection={'column'} gap={'20px'}>
+                            <span style={{ fontSize: '19px', fontWeight: 600, color: '#090F24' }}>Меню сайта</span>
+                            <Box width={'100%'} height={'100%'} display={'flex'} justifyContent={'space-between'}>
+                                <Box display={'flex'} flexDirection={'column'} gap={'11px'}>
+                                    <span>Каталог</span>
+                                    <span>О нас</span>
+                                    <span>Оплата и доставка</span>
+                                    <span>Возврат и гарантийный ремонт</span>
+                                    <span>Защита личных данных</span>
+                                    <span>Бренды</span>
+                                </Box>
+                                <Box display={'flex'} flexDirection={'column'} gap={'11px'}>
+                                    <span>Правила покупки</span>
+                                    <span>Отзывы</span>
+                                    <span>FAQ</span>
+                                    <span>Блог</span>
+                                    <span>Контакты</span>
+                                </Box>
+                            </Box>
+                        </Box>
                     </Box>
-                    <Box width={'560px'} height={'100%'} borderLeft={'1px solid #74CCD8'}>
-
+                    <Box width={'560px'} height={'100%'} borderLeft={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} justifyContent={'center'} position={'relative'}>
+                        <Box width={'170px'} height={'180px'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+                            <Box display={'flex'} flexDirection={'column'} gap={'20px'}>
+                                <span style={{ fontWeight: 600, color: '#090F24', fontSize: '18px' }}>Социальные сети</span>
+                                <div style={{ display: 'flex', gap: '20px ' }}>
+                                    <SVGIcons icon='Twitter_icon' />
+                                    <SVGIcons icon='instagram_icon' />
+                                    <SVGIcons icon='faceebok_icon' />
+                                    <SVGIcons icon='Youtube_icon' />
+                                </div>
+                            </Box>
+                            <Box>
+                                <SVGIcons icon='Footer_bernu' />
+                            </Box>
+                        </Box>
+                        <div style={{ width: '71px', height: '71px', borderRadius: '100%', position: 'absolute', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid #74CCD8', top: '-43px', right: '66px' }}>
+                            <SVGIcons icon='Chat' />
+                            <span>Chat</span>
+                        </div>
                     </Box>
                 </Box>
                 <Box width={'100%'} height={'48px'} bgcolor={'#74CCD8'} display={'flex'} alignItems={'center'} justifyContent={'center'} fontSize={'14px'} color={'white'}>

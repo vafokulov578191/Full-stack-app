@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import Head from 'next/head'
 import Layout from '../Layout/Layout'
 import styles from '../styles/Home.module.css'
@@ -12,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Layout>
-        Main
+        <Box width={'100%'} height={'100vh'}></Box>
       </Layout>
     </div>
   )
