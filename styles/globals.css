@@ -14,3 +14,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../Fonts/Roboto/Roboto-Regular.ttf');
+}
+
+.burger_panel {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  height: 100%;
+  border-right: 1px solid rgb(211, 211, 211);
+}
+
+.burger_panel:hover {
+  background-color: #EBF0F7;
+}
+
+.serach_input {
+  width: 1000px;
+  height: 45px;
+  border: 1px solid #B7B8C5;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 42px;
+  outline: none;
+}
