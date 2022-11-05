@@ -152,7 +152,7 @@ const Layout = ({ children }) => {
                                 <SVGIcons icon='Footer_bernu' />
                             </Box>
                         </Box>
-                        <div style={{ width: '71px', height: '71px', borderRadius: '100%', position: 'absolute', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid #74CCD8', top: '-43px', right: '66px' }}>
+                        <div style={{ width: '71px', cursor: 'pointer', height: '71px', borderRadius: '100%', position: 'absolute', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid #74CCD8', top: '-43px', right: '66px' }}>
                             <SVGIcons icon='Chat' />
                             <span>Chat</span>
                         </div>

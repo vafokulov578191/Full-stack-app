@@ -11,7 +11,8 @@ a {
   text-decoration: none;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -57,3 +58,12 @@ ul, li {
   font-size: 30px !important;
 }
 
+.big_assortiments {
+  transition: 0.3s ease;
+  border-radius: 3px;
+}
+
+.big_assortiments:hover {
+  background-color: #74CCD8;
+  color: white;
+}

@@ -7,9 +7,62 @@ import header_bgsm from '../Components/Images/Bērnu-Veikals-Banner-small-1 1.pn
 import header_bgsm2 from '../Components/Images/Bērnu-Veikals-Banner-small-2 2.png'
 import { Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header'
 import SVGIcons from '../Components/SVGIcons'
+import Swiper_Component from '../Components/Swiper/Swiper_Component'
+import Arrimage from '../Components/Images/Mask group (1).png'
+import Arrimage2 from '../Components/Images/Mask group (2).png'
+import Arrimage3 from '../Components/Images/Mask group (3).png'
+import Arrimage4 from '../Components/Images/Mask group (4).png'
+import Arrimage5 from '../Components/Images/Mask group (5).png'
+import Arrimage6 from '../Components/Images/Mask group (6).png'
 
 
 export default function Home() {
+
+  let arr = [
+    {
+      id: 1,
+      Image: Arrimage,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 2,
+      Image: Arrimage2,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 3,
+      Image: Arrimage3,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 4,
+      Image: Arrimage4,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 5,
+      Image: Arrimage5,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 6,
+      Image: Arrimage6,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+    {
+      id: 7,
+      Image: Arrimage6,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: true
+    },
+  ]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -58,9 +111,79 @@ export default function Home() {
                 </div>
               </Box>
             </Box>
-            <Box></Box>
-            <Box></Box>
-            <Box></Box>
+
+            <Box width={'100%'} height={'580px'} display={'flex'} alignItems={'center'} justifyContent={'center'} bgcolor={'#F4F5F9'}>
+              <Box width={'1850px'} height={'445px'} display={'flex'} flexDirection={'column'} gap={'36px'}>
+                <Box display={'flex'} flexDirection={'column'} margin={'0px auto'} textAlign={'center'}>
+                  <span style={{ color: '#090F24', fontWeight: '700', fontSize: '28px' }}>Широкий ассортимент товаров</span>
+                  <span style={{ color: '#ED9BC1', fontSize: '20px', fontFamily: 'cursive' }}>для малышей и мам</span>
+                </Box>
+                <Box width={'100%'} padding={'0px 36px'} display={'flex'} flexWrap={'wrap'} gap={'24px'} alignItems={'center'}>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Kolyaska_icon' />
+                    <span>Коляски</span>
+                  </div>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Icon1' />
+                    <span>Автокресла</span>
+                  </div>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Icon2' />
+                    <span>Детская комната</span>
+                  </div>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Icon3' />
+                    <span>Транспорт и спорт</span>
+                  </div>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Icon4' />
+                    <span>Игрушки и игры</span>
+                  </div>
+                  <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                    <SVGIcons icon='Icon5' />
+                    <span>Одежда и обувь</span>
+                  </div>
+
+                  <Box display={'flex'} gap={'24px'} marginTop={'20px'}>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon6' />
+                      <span>Для мамочек	</span>
+                    </div>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon7' />
+                      <span>Гигиена и уход</span>
+                    </div>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon8' />
+                      <span>Кормление	</span>
+                    </div>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon9' />
+                      <span>Детксие подарки</span>
+                    </div>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon10' />
+                      <span>Елки и игрушки</span>
+                    </div>
+                    <div className='big_assortiments' style={{ width: '275px', height: '122px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', fontWeight: '600', cursor: 'pointer' }}>
+                      <SVGIcons icon='Icon11' />
+                      <span>Подарочные карты</span>
+                    </div>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+
+            <Box width={'100%'} height={'650px'} display={'flex'} flexDirection={'column'} padding={'0px 15px'} textAlign={'center'} gap={'30px'}>
+              <span style={{ marginTop: '70px', fontWeight: 700, fontSize: '28px' }}>Вы уже смотрели</span>
+              <Box width={'100%'} display={'flex'}>
+                <Swiper_Component arr={arr} />
+              </Box>
+            </Box>
+
+            <Box>
+
+            </Box>
           </Box>
         </Box>
       </Layout>
