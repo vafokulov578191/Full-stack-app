@@ -7,7 +7,7 @@ import header_bgsm from '../Components/Images/Bērnu-Veikals-Banner-small-1 1.pn
 import header_bgsm2 from '../Components/Images/Bērnu-Veikals-Banner-small-2 2.png'
 import { Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header'
 import SVGIcons from '../Components/SVGIcons'
-import { Swiper_Component, Swiper_Component2 } from '../Components/Swiper/Swiper_Component'
+import { Swiper_Component, Swiper_Component2, Swiper_Component3, Swiper_Component4 } from '../Components/Swiper/Swiper_Component'
 import Arrimage from '../Components/Images/Mask group (1).png'
 import Arrimage2 from '../Components/Images/Mask group (2).png'
 import Arrimage3 from '../Components/Images/Mask group (3).png'
@@ -17,6 +17,10 @@ import Arrimage6 from '../Components/Images/Mask group (6).png'
 
 import Skidka_image from '../Components/Images/Rectangle 9.png'
 import Skidka_image2 from '../Components/Images/Mask group (7).png'
+import information_img from '../Components/Images/image.png'
+import information_img2 from '../Components/Images/Rectangle 145.png'
+import Brand from '../Components/Brands/Brand'
+import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
 
 export default function Home() {
 
@@ -26,91 +30,160 @@ export default function Home() {
       Image: Arrimage,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 2,
       Image: Arrimage2,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 3,
       Image: Arrimage3,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 4,
       Image: Arrimage4,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 5,
       Image: Arrimage5,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 6,
       Image: Arrimage6,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 7,
       Image: Arrimage6,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: true,
-      top: false
+      top: false,
+      New: false
     },
     {
       id: 8,
       Image: Arrimage6,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
     },
     {
       id: 9,
       Image: Arrimage,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
     },
     {
       id: 10,
       Image: Arrimage4,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
     },
     {
       id: 11,
       Image: Arrimage5,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
     },
     {
       id: 12,
       Image: Arrimage6,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
     },
     {
       id: 13,
       Image: Arrimage,
       title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
       discount: false,
-      top: true
+      top: true,
+      New: false
+    },
+    {
+      id: 14,
+      Image: Arrimage4,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 15,
+      Image: Arrimage5,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 16,
+      Image: Arrimage6,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 17,
+      Image: Arrimage6,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 18,
+      Image: Arrimage,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 19,
+      Image: Arrimage3,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
+    },
+    {
+      id: 20,
+      Image: Arrimage3,
+      title: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
+      discount: false,
+      top: false,
+      New: true
     },
   ]
 
@@ -239,25 +312,83 @@ export default function Home() {
               </Box>
             </Box>
 
-            <Box width={'100%'} height={'280px'} display={'flex'} position={'relative'} marginBottom={'100px'}>
+            <Box width={'100%'} height={'280px'} display={'flex'} position={'relative'}>
               <Box width={'70%'} height={'100%'} position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} gap={'15px'} zIndex={10}>
                 <div style={{ position: 'absolute', zIndex: '2', left: '0px' }}>
                   <Image src={Skidka_image} width={1344} height={280} alt='alt' />
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', zIndex: 10 }}>
-                  <span>Получайте информацию о скидках первыми</span>
-                  <span>Оформите подписку и вы будете вкурсе всех наших выгодных акций и скидок</span>
+                <div style={{ position: 'absolute', zIndex: 10, left: '20px', top: '-45px' }}>
+                  <SVGIcons icon='Skidka_ikon' />
                 </div>
-                <div style={{ zIndex: 10, display: 'flex', gap: '15px' }}>
-                  <input type="text" />
-                  <Button>Оформить подписку</Button>
+                <div style={{ position: 'absolute', zIndex: 10, right: '76px', top: '-28px' }}>
+                  <SVGIcons icon='Sharik_like' />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', zIndex: 10, fontFamily: 'Noto Sans', marginRight: '325px' }}>
+                  <span style={{ color: '#090F24', fontWeight: 700, fontSize: '30px' }}>Получайте информацию о скидках первыми</span>
+                  <span style={{ color: '#393F7B', }}>Оформите подписку и вы будете вкурсе всех наших выгодных акций и скидок</span>
+                </div>
+                <div style={{ zIndex: 10, display: 'flex', gap: '10px' }}>
+                  <input style={{ width: '760px', borderRadius: '35px', outline: 'none', paddingLeft: '25px', border: '1px solid #50909C' }} type="text" placeholder='Ваша электронная почта' />
+                  <Button sx={{ width: '230px', height: '45px', backgroundColor: '#74CCD8', borderRadius: '25px', color: 'white', textTransform: 'inherit' }}>Оформить подписку</Button>
                 </div>
               </Box>
+
               <Box width={'30%'} height={'100%'} position={'relative'} zIndex={1} >
                 <div style={{ position: 'absolute', right: '0px' }}>
                   <Image src={Skidka_image2} height={278} alt='alt' />
                 </div>
+                <div style={{ position: 'absolute', zIndex: 10, right: '0px', bottom: '-115px' }}>
+                  <SVGIcons icon='skidka_red' />
+                </div>
               </Box>
+            </Box>
+
+            <Box width={'100%'} height={'775px'} display={'flex'} flexDirection={'column'} textAlign={'center'} gap={'31px'} fontFamily={'Noto Sans'}>
+              <span style={{ color: '#090F24', fontSize: '28px', fontWeight: '600', marginTop: '64px' }}>Популярные товары</span>
+              <Swiper_Component3 arr={arr} />
+            </Box>
+
+            <Box width={'100%'} height={'775px'} bgcolor={'#F4F5F9'} display={'flex'} flexDirection={'column'} textAlign={'center'} gap={'31px'} fontFamily={'Noto Sans'}>
+              <span style={{ color: '#090F24', fontSize: '28px', fontWeight: '600', marginTop: '64px' }}>Популярные товары</span>
+              <Swiper_Component4 arr={arr} />
+            </Box>
+
+            <Box width={'100%'} height={'445px'} display={'flex'}>
+              <Box width={'70%'} height={'100%'} fontFamily={'Noto Sans'} paddingLeft={'115px'} display={'flex'} flexDirection={'column'} justifyContent={'center'} gap={'20px'}>
+                <Box display={'flex'} alignItems={'center'} gap={'15px'}>
+                  <span style={{ color: '#090F24', fontWeight: '600', fontSize: '26px' }}>О нас</span>
+                  <SVGIcons icon='Apple' />
+                </Box>
+                <Box width={'830px'}>
+                  <span style={{ color: '#686877', lineHeight: '26px' }}><span style={{ color: '#74CCD8', fontWeight: '600' }}>Bērnu veikals</span> — это огромный интернет-магазин для малышей и их родителей. Для нас главный приоритет — это комфорт и безопасность для Вас и Ваших драгоценных крошек ♥. Наш интернет-магазин всегда под рукой и Вы в любое время суток можете заказывать товары, которые мы наиболее быстрым и удобным для Вас способом доставим по всей территории Балтии. Bērnu Veikals обеспечивает большим выбором товаров наилучшего качества по доступным ценам, мы заботимся не только о качестве, но и о вашем кошельке 👛, ведь мы…</span>
+                </Box>
+                <Button sx={{ width: '200px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', textAlign: 'start', gap: '10px', textTransform: 'inherit' }}>
+                  <span style={{ color: '#74CCD8' }}>Читать подробнее</span>
+                  <div style={{ width: '30px', display: 'flex', alignItems: 'center' }}>
+                    <SVGIcons icon='Arrow' />
+                  </div>
+                </Button>
+              </Box>
+              <Box width={'30%'} height={'100%'} position={'relative'}>
+                <Box display={'flex'} flexDirection={'column'} textAlign={'center'} position={'absolute'} zIndex={10} right={'140px'} top={'50px'} gap={'10px'}>
+                  <Image src={information_img} alt='babyshop' />
+                  <span style={{ color: '#FFFFFF', fontSize: '20px', fontFamily: 'cursive' }}>Забота о малышах и мамах</span>
+                </Box>
+                <Box position={'absolute'} top={'-1px'} right={'0px'} zIndex={2}>
+                  <Image src={information_img2} alt='babyshop' />
+                </Box>
+              </Box>
+            </Box>
+
+            <Box width={'100%'} height={'585px'} display={'flex'} flexDirection={'column'} bgcolor={'#F4F5F9'} gap={'30px'} textAlign={'center'}>
+              <span style={{ color: '#090F24', marginTop: '60px', fontSize: '28px', fontWeight: '600' }}>Бренды</span>
+              <Box width={'100%'} display={'flex'} flexWrap={'wrap'}>
+                <Brand />
+              </Box>
+              <Button sx={{ margin: '0px auto', width: '230px', height: '50px', borderRadius: '50px', marginTop: '10px', bgcolor: 'white', textTransform: 'inherit', color: 'black', fontWeight: '600' }}>
+                Смотреть все бренды
+                <ArrowRightSharpIcon />
+              </Button>
             </Box>
 
 

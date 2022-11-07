@@ -24,7 +24,7 @@ export const Swiper_Component = (props) => {
                 {
                     props.arr.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <Card Img={item.Image} title={item.title} />
+                            <Card Img={item.Image} title={item.title} top={item.top} />
                         </SwiperSlide>
                     ))
                 }
@@ -36,7 +36,6 @@ export const Swiper_Component = (props) => {
 
 export const Swiper_Component2 = (props) => {
     const discount = props.arr.filter(item => item.discount === true)
-    console.log(discount);
     return (
         <Box width={'100%'} >
             <Swiper
@@ -51,7 +50,58 @@ export const Swiper_Component2 = (props) => {
                 {
                     discount.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <All_card Img={item.Image} title={item.title} />
+                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} />
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+        </Box>
+    )
+}
+
+
+export const Swiper_Component3 = (props) => {
+    const discount = props.arr.filter(item => item.top === true)
+    return (
+        <Box width={'100%'} >
+            <Swiper
+                modules={[Navigation, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={6}
+                navigation
+                onSwiper={(swiper) => swiper}
+                onSlideChange={() => console.log('slide change')}
+                style={{ paddingRight: '50px', paddingLeft: '16px' }}
+            >
+                {
+                    discount.map((item, id) => (
+                        <SwiperSlide key={id}>
+                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} />
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+        </Box>
+    )
+}
+
+export const Swiper_Component4 = (props) => {
+    const discount = props.arr.filter(item => item.New === true)
+    return (
+        <Box width={'100%'} >
+            <Swiper
+                modules={[Navigation, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={6}
+                navigation
+                onSwiper={(swiper) => swiper}
+                onSlideChange={() => console.log('slide change')}
+                style={{ paddingRight: '50px', paddingLeft: '16px' }}
+            >
+                {
+                    discount.map((item, id) => (
+                        <SwiperSlide key={id}>
+                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} New={item.New} />
                         </SwiperSlide>
                     ))
                 }

@@ -32,13 +32,21 @@ export const Card = ({ Img, title }) => {
 }
 
 
-export const All_card = ({ Img, title }) => {
+export const All_card = ({ Img, title, discount, top, New }) => {
     return (
         <Box width={'295px'} height={'100%'} borderRadius={'8px'} p={'10px'} display={'flex'} flexDirection={'column'} bgcolor={'#ffffff'} fontFamily={'Noto Sans'} border={'1px solid #E4E7EE'}>
             <Box sx={{ width: '267px', height: '267px', display: 'flex', alignItems: 'center', marginBottom: '20px', position: 'relative' }}>
                 <Image src={Img} alt='alt' />
                 <div style={{ cursor: 'pointer', position: 'absolute', top: '6px', left: '6px' }}>
-                    <SVGIcons icon='Swiper_discount' />
+                    {
+                        discount === true ? <SVGIcons icon='Swiper_discount' /> : ''
+                    }
+                    {
+                        top === true ? <SVGIcons icon='HIT' /> : ''
+                    }
+                    {
+                        New === true ? <SVGIcons icon='New' /> : ''
+                    }
                 </div>
                 <div style={{ cursor: 'pointer', position: 'absolute', top: '5px', right: '10px' }}>
                     <SVGIcons icon='Like' />
