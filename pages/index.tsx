@@ -5,7 +5,7 @@ import Layout from '../Layout/Layout'
 import styles from '../styles/Home.module.css'
 import header_bgsm from '../Components/Images/Bērnu-Veikals-Banner-small-1 1.png'
 import header_bgsm2 from '../Components/Images/Bērnu-Veikals-Banner-small-2 2.png'
-import { Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header'
+import { Swiper_Footer, Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header'
 import SVGIcons from '../Components/SVGIcons'
 import { Swiper_Component, Swiper_Component2, Swiper_Component3, Swiper_Component4 } from '../Components/Swiper/Swiper_Component'
 import Arrimage from '../Components/Images/Mask group (1).png'
@@ -14,13 +14,18 @@ import Arrimage3 from '../Components/Images/Mask group (3).png'
 import Arrimage4 from '../Components/Images/Mask group (4).png'
 import Arrimage5 from '../Components/Images/Mask group (5).png'
 import Arrimage6 from '../Components/Images/Mask group (6).png'
-
 import Skidka_image from '../Components/Images/Rectangle 9.png'
 import Skidka_image2 from '../Components/Images/Mask group (7).png'
 import information_img from '../Components/Images/image.png'
 import information_img2 from '../Components/Images/Rectangle 145.png'
 import Brand from '../Components/Brands/Brand'
 import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
+import Baby_img from '../Components/Images/Mask group (8).png'
+import Checkbox from '@mui/material/Checkbox';
+import Products_img from '../Components/Images/1.png'
+import Products_img2 from '../Components/Images/2.png'
+import Products_img3 from '../Components/Images/3.png'
+
 
 export default function Home() {
 
@@ -209,7 +214,7 @@ export default function Home() {
             </Box>
             <Box display={'flex'} alignItems={'center'} width={'100%'} height={'300px'} bgcolor={'#F4F5F9'}>
               <Box display={'flex'} width={'1670px'} margin={'0px auto'}>
-                <Swiper_Header2 />
+                <Swiper_Header2 otziv={false} />
               </Box>
             </Box>
           </Box>
@@ -391,6 +396,77 @@ export default function Home() {
               </Button>
             </Box>
 
+            <Box width={'100%'} height={'611px'} display={'flex'} position={'relative'} overflow={'hidden'} fontFamily={'Noto Sans'}>
+              <Box width={'40%'} height={'100%'} position={'relative'} zIndex={10}>
+                <div style={{ position: 'relative', top: '-2px' }}>
+                  <Image src={Baby_img} alt='alt' />
+                </div>
+                <div style={{ position: 'absolute', bottom: '-94px', left: '175px' }}>
+                  <SVGIcons icon='Phone_svg' />
+                </div>
+                <div style={{ position: 'absolute', bottom: '-32px', left: '236px' }}>
+                  <SVGIcons icon='SmartPhone' />
+                </div>
+              </Box>
+
+              <Box width={'60%'} height={'100%'} bgcolor={'#D6F4FA'} position={'relative'} zIndex={9}>
+                <Box width={'680px'} height={'490px'} display={'flex'} flexDirection={'column'} textAlign={'center'} position={'absolute'} top={'50%'} left={'50%'} sx={{ transform: 'translate(-50%, -50%)' }}>
+                  <Box display={'flex'} flexDirection={'column'} gap={'5px'} marginBottom={'15px'}>
+                    <Box display={'flex'} margin={'0px auto'} alignItems={'center'} gap={'20px'}>
+                      <SVGIcons icon='Apple' />
+                      <span style={{ color: '#090F24', fontWeight: '600', fontSize: '28px' }}>Свяжитесь с нами</span>
+                    </Box>
+                    <span style={{ color: '#1B5F6B', fontSize: '16px' }}>Отправьте нам сообщение и мы ответим в ближайшее время</span>
+                  </Box>
+                  <form style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <input className='input_inf' type="text" placeholder='Ваше имя*' />
+                    <input className='input_inf' type="text" placeholder='Телефон' />
+                    <input className='input_inf' type="text" placeholder='Электронная почта*' />
+                    <textarea style={{ width: '678px', height: '130px', borderRadius: '20px', border: '1px solid #74CCD8', outline: 'none', padding: '25px 0px 0px 20px', resize: 'none' }} placeholder='Текст сообщения*'></textarea>
+                    <div>
+                      <span style={{ color: '#427781', fontSize: '13px' }}>*обязательные поля</span>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <Checkbox />
+                        <span>Я согласен(-на) с <strong>правилами</strong> о обработке моих персональных данных</span>
+                      </div>
+                      <Button type='submit' sx={{ width: '250px', height: '46px', bgcolor: '#74CCD8', borderRadius: '30px', color: 'white', textTransform: 'inherit' }}>Отправить сообщение</Button>
+                    </div>
+                  </form>
+                  <div style={{ position: 'absolute', right: '-236px', bottom: '25px' }}>
+                    <SVGIcons icon='Puzir' />
+                  </div>
+                </Box>
+              </Box>
+            </Box>
+
+            <Box width={'100%'} height={'536px'} display={'flex'} flexDirection={'column'} bgcolor={'#F4F5F9'} textAlign={'center'} fontFamily={'Noto Sans'} gap={'35px'}>
+              <Box display={'flex'} flexDirection={'column'} gap={'15px'} marginTop={'60px'} color={'#686877'} fontSize={'16px'}>
+                <span style={{ color: '#090F24', fontWeight: '600', fontSize: '28px' }}>Отзывы покупателей</span>
+                <span>Средняя оценка на Google: <span style={{ color: '#FBBC05', fontSize: '21px' }}>4,9</span> из 5</span>
+              </Box>
+              <Box>
+                <Swiper_Header2 otziv={true} />
+              </Box>
+              <Button sx={{ width: '280px', height: '48px', borderRadius: '50px', bgcolor: 'white', color: 'black', margin: '0px auto' }}>Смотреть все отзывы Google</Button>
+            </Box>
+
+            <Box width={'100%'} height={'925px'} display={'flex'} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'} gap={'30px'}>
+              <div style={{ marginTop: '60px' }}>
+                <Image src={Products_img} alt='alt' />
+              </div>
+              <div style={{ marginBottom: '80px' }}>
+                <Image src={Products_img2} alt='alt' />
+              </div>
+              <div style={{ marginBottom: '80px' }}>
+                <Image src={Products_img3} alt='alt' />
+              </div>
+            </Box>
+
+            <Box width={'100%'} height={'536px'} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} bgcolor={'#D6F4FA'} gap={'36px'}>
+              <span style={{ color: '#090F24', fontWeight: '700', fontSize: '30px' }}>Наш блог</span>
+              <Swiper_Footer />
+              <Button sx={{ bgcolor: '#ED9BB9', width: '161px', height: '48px', borderRadius: '55px', display: 'flex', alignItems: 'center', textTransform: 'inherit', color: 'white' }}>Читать блог <ArrowRightSharpIcon /></Button>
+            </Box>
 
           </Box>
         </Box>

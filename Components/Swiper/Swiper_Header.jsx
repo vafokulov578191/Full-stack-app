@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from 'next/image';
+import { Customer_Reviews, Customer_Reviews2, My_blog } from '../Customer_Reviews';
 
 
 export const Swiper_Header = () => {
@@ -43,42 +44,131 @@ export const Swiper_Header = () => {
 
 
 
-export const Swiper_Header2 = () => {
+export const Swiper_Header2 = ({ otziv }) => {
     return (
         <Swiper
             modules={[Navigation, Scrollbar, A11y]}
             spaceBetween={50}
-            slidesPerView={6}
+            slidesPerView={otziv === true ? 4 : 6}
             navigation
             onSwiper={(swiper) => swiper}
             onSlideChange={() => console.log('slide change')}
+            style={{ paddingLeft: otziv === true ? '40px' : '0px' }}
         >
             <SwiperSlide>
-                <Image objectFit='cover' width={256} height='185' src={Header_2_img.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews2 />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img2.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img2.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img3.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews2 />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img3.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img4.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img4.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews2 />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img4.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img4.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image objectFit='cover' width={256} height='185' src={Header_2_img.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews2 />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img2.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img2.src} alt='alt' />
+                    )
+                }
             </SwiperSlide>
             <SwiperSlide>
-                <Image width={256} height='185' src={Header_2_img3.src} alt='alt' />
+                {
+                    otziv === true ? (
+                        <Customer_Reviews2 />
+                    ) : (
+                        <Image width={256} height={185} src={Header_2_img3.src} alt='alt' />
+                    )
+                }
+            </SwiperSlide>
+        </Swiper>
+    )
+}
+
+
+export const Swiper_Footer = () => {
+    return (
+        <Swiper
+            modules={[Navigation, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            onSwiper={(swiper) => swiper}
+            onSlideChange={() => console.log('slide change')}
+            style={{ width: '100%', padding: '0px 37px', }}
+        >
+            <SwiperSlide>
+                <My_blog />
+            </SwiperSlide>
+            <SwiperSlide>
+                <My_blog />
+            </SwiperSlide>
+            <SwiperSlide>
+                <My_blog />
+            </SwiperSlide>
+            <SwiperSlide>
+                <My_blog />
+            </SwiperSlide>
+            <SwiperSlide>
+                <My_blog />
+            </SwiperSlide>
+            <SwiperSlide>
+                <My_blog />
             </SwiperSlide>
         </Swiper>
     )

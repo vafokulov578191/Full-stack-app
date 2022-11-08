@@ -74,3 +74,12 @@ li {
   border-radius: 100%;
   cursor: pointer;
 }
+
+.input_inf {
+  width: 678px;
+  height: 43px;
+  border: 1px solid #74CCD8;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 20px;
+}
