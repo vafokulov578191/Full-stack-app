@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, IconButton, Stack, Typography } from '@mui/material'
 import SVGIcons from '../Components/SVGIcons'
 import Link from 'next/link'
 import AccountMenu from '../Components/AccountMenu';
+import { useSelector } from 'react-redux';
 
 type Props = {}
 
 const Layout = ({ children }) => {
     let user = []
+    // const state = useSelector(state => state.liked.amount)
+
+    console.log(state);
+    
 
     return (
         <div>
             <Box width={'100%'} height={'120px'}>
                 <Stack color={'#090F24'} bgcolor={'#ffffff'} width={'100%'} height={'50px'} p={'0px 50px'} direction={'row'} alignItems={'center'} justifyContent={'space-between'} >
-                    <SVGIcons icon='logo' />
+                    <Link href='/'>
+                        <SVGIcons icon='logo' />
+                    </Link>
                     <Box display={'flex'} gap={'40px'} fontFamily={'Noto Sans'} fontSize={'14px'}>
                         <Link href='#'>О нас</Link>
                         <Link href='#'>Оплата и доставка</Link>
@@ -71,18 +78,22 @@ const Layout = ({ children }) => {
                             )
                         }
                         <Box display={'flex'} alignItems={'center'} gap={'42px'} width={'130px'} justifyContent={'flex-end'}>
-                            <div style={{ cursor: 'pointer', position: 'relative' }}>
-                                <SVGIcons icon='Liked' />
-                                <div style={{ width: '19px', height: '19px', position: 'absolute', borderRadius: '100%', background: '#ED9BC1', fontSize: '10.50px', textAlign: 'center', top: '-8px', left: '14px' }}>
-                                    <span style={{ color: 'white', position: 'relative', top: '2px' }}>10</span>
+                            <Link href='Liked'>
+                                <div style={{ cursor: 'pointer', position: 'relative' }}>
+                                    <SVGIcons icon='Liked' />
+                                    <div style={{ width: '19px', height: '19px', position: 'absolute', borderRadius: '100%', background: '#ED9BC1', fontSize: '10.50px', textAlign: 'center', top: '-8px', left: '14px' }}>
+                                        <span style={{ color: 'white', position: 'relative', top: '2px' }}>2</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div style={{ cursor: 'pointer', position: 'relative' }}>
-                                <SVGIcons icon='Store' />
-                                <div style={{ width: '19px', height: '19px', position: 'absolute', borderRadius: '100%', background: '#ED9BC1', fontSize: '10.50px', textAlign: 'center', top: '-8px', left: '16px' }}>
-                                    <span style={{ color: 'white', position: 'relative', top: '2px' }}>1</span>
+                            </Link>
+                            <Link href='OrderStep'>
+                                <div style={{ cursor: 'pointer', position: 'relative' }}>
+                                    <SVGIcons icon='Store' />
+                                    <div style={{ width: '19px', height: '19px', position: 'absolute', borderRadius: '100%', background: '#ED9BC1', fontSize: '10.50px', textAlign: 'center', top: '-8px', left: '16px' }}>
+                                        <span style={{ color: 'white', position: 'relative', top: '2px' }}>1</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </Box>
                     </Box>
                 </Stack>

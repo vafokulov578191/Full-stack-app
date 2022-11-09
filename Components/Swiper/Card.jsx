@@ -4,9 +4,20 @@ import React from 'react'
 import SVGIcons from '../SVGIcons'
 import Raduis from './Raduis'
 import HalfRating from './HalfRating'
+import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
+import { likedProduct } from '../../store/features/likedSlice'
 
+export const Card = ({ Img, title, isLike = false, item }) => {
 
-export const Card = ({ Img, title }) => {
+    const [like, setLike] = useState(isLike);
+    const dispatch = useDispatch();
+    const state = useSelector(state => state.liked.liked)
+    const handleLike = () => {
+        dispatch(likedProduct(item));
+        setLike(!like);
+    };
+
     return (
         <>
             <Box width={'295px'} height={'100%'} borderRadius={'8px'} p={'10px'} display={'flex'} flexDirection={'column'} bgcolor={'#ffffff'} fontFamily={'Noto Sans'} border={'1px solid #E4E7EE'} >
@@ -15,8 +26,8 @@ export const Card = ({ Img, title }) => {
                     <div style={{ cursor: 'pointer', position: 'absolute', top: '6px', left: '6px' }}>
                         <SVGIcons icon='Swiper_discount' />
                     </div>
-                    <div style={{ cursor: 'pointer', position: 'absolute', top: '5px', right: '10px' }}>
-                        <SVGIcons icon='Like' />
+                    <div style={{ cursor: 'pointer', position: 'absolute', top: '5px', right: '10px' }} onClick={handleLike}>
+                        <SVGIcons icon='Like' checked={like} />
                     </div>
                 </Box>
                 <Box display={'flex'} flexDirection={'column'} textAlign={'start'} gap={'10px'} padding={'0px 10px'} marginBottom={'20px'}>
@@ -32,7 +43,15 @@ export const Card = ({ Img, title }) => {
 }
 
 
-export const All_card = ({ Img, title, discount, top, New }) => {
+export const All_card = ({ Img, title, discount, top, New, item, isLike = false }) => {
+    const [like, setLike] = useState(isLike);
+    const dispatch = useDispatch();
+    const state = useSelector(state => state.liked.liked)
+    const handleLike = () => {
+        dispatch(likedProduct(item));
+        setLike(!like);
+    };
+
     return (
         <Box width={'295px'} height={'100%'} borderRadius={'8px'} p={'10px'} display={'flex'} flexDirection={'column'} bgcolor={'#ffffff'} fontFamily={'Noto Sans'} border={'1px solid #E4E7EE'}>
             <Box sx={{ width: '267px', height: '267px', display: 'flex', alignItems: 'center', marginBottom: '20px', position: 'relative' }}>
@@ -48,8 +67,8 @@ export const All_card = ({ Img, title, discount, top, New }) => {
                         New === true ? <SVGIcons icon='New' /> : ''
                     }
                 </div>
-                <div style={{ cursor: 'pointer', position: 'absolute', top: '5px', right: '10px' }}>
-                    <SVGIcons icon='Like' />
+                <div style={{ cursor: 'pointer', position: 'absolute', top: '5px', right: '10px' }} onClick={handleLike}>
+                    <SVGIcons icon='Like' checked={like} />
                 </div>
             </Box>
             <Box display={'flex'} flexDirection={'column'} textAlign={'start'} gap={'10px'} padding={'0px 10px'} marginBottom={'20px'}>

@@ -8,8 +8,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Box } from '@mui/system';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
-export const Swiper_Component = (props) => {
+
+export const Swiper_Component = ({ arr }) => {
+
     return (
         <Box width={'100%'} >
             <Swiper
@@ -22,9 +26,9 @@ export const Swiper_Component = (props) => {
                 style={{ paddingRight: '50px', paddingLeft: '16px' }}
             >
                 {
-                    props.arr.map((item, id) => (
+                    arr.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <Card Img={item.Image} title={item.title} top={item.top} />
+                            <Card Img={item.Image} item={item} title={item.title} top={item.top} />
                         </SwiperSlide>
                     ))
                 }
@@ -50,7 +54,7 @@ export const Swiper_Component2 = (props) => {
                 {
                     discount.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} />
+                            <All_card Img={item.Image} item={item} title={item.title} top={item.top} discount={item.discount} />
                         </SwiperSlide>
                     ))
                 }
@@ -76,7 +80,7 @@ export const Swiper_Component3 = (props) => {
                 {
                     discount.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} />
+                            <All_card Img={item.Image} item={item} title={item.title} top={item.top} discount={item.discount} />
                         </SwiperSlide>
                     ))
                 }
@@ -101,7 +105,7 @@ export const Swiper_Component4 = (props) => {
                 {
                     discount.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <All_card Img={item.Image} title={item.title} top={item.top} discount={item.discount} New={item.New} />
+                            <All_card Img={item.Image} title={item.title} item={item} top={item.top} discount={item.discount} New={item.New} />
                         </SwiperSlide>
                     ))
                 }
