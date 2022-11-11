@@ -7,7 +7,7 @@ interface Props {
 const Cabinet = (props: Props) => {
     return (
         <div>
-            
+            adaw
         </div>
     )
 }

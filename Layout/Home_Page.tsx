@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material';
 import { Swiper_Footer, Swiper_Header, Swiper_Header2 } from '../Components/Swiper/Swiper_Header';
 import Image from 'next/image';
 import SVGIcons from '../Components/SVGIcons';
-import { Swiper_Component, Swiper_Component2, Swiper_Component3, Swiper_Component4 } from '../Components/Swiper/Swiper_Component';
+import { Swiper_Component, Swiper_Component2 } from '../Components/Swiper/Swiper_Component';
 import Brand from '../Components/Brands/Brand';
 import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
 import Checkbox from '@mui/material/Checkbox';
@@ -23,6 +23,9 @@ import arr from './Arr';
 interface Props { }
 
 const Home_Page = () => {
+    const Top = arr.filter(item => item.top === true)
+    const New = arr.filter(item => item.New === true)
+    const discount = arr.filter(item => item.discount === true)
 
     return (
         <div>
@@ -138,7 +141,7 @@ const Home_Page = () => {
                     <Box width={'100%'} fontFamily={'Noto Sans'} height={'775px'} display={'flex'} flexDirection={'column'} bgcolor={'#F4F5F9'} textAlign={'center'} gap={'31px'}>
                         <span style={{ color: '#090F24', fontSize: '28px', fontWeight: '600', marginTop: '64px' }}>Акции и скидки</span>
                         <Box width={'100%'} display={'flex'}>
-                            <Swiper_Component2 arr={arr} />
+                            <Swiper_Component2 arr={discount} />
                         </Box>
                     </Box>
 
@@ -175,12 +178,12 @@ const Home_Page = () => {
 
                     <Box width={'100%'} height={'775px'} display={'flex'} flexDirection={'column'} textAlign={'center'} gap={'31px'} fontFamily={'Noto Sans'}>
                         <span style={{ color: '#090F24', fontSize: '28px', fontWeight: '600', marginTop: '64px' }}>Популярные товары</span>
-                        <Swiper_Component3 arr={arr} />
+                        <Swiper_Component2 arr={Top} />
                     </Box>
 
                     <Box width={'100%'} height={'775px'} bgcolor={'#F4F5F9'} display={'flex'} flexDirection={'column'} textAlign={'center'} gap={'31px'} fontFamily={'Noto Sans'}>
                         <span style={{ color: '#090F24', fontSize: '28px', fontWeight: '600', marginTop: '64px' }}>Популярные товары</span>
-                        <Swiper_Component4 arr={arr} />
+                        <Swiper_Component2 arr={New} />
                     </Box>
 
                     <Box width={'100%'} height={'445px'} display={'flex'}>

@@ -1,12 +1,25 @@
 import Head from 'next/head'
 import React from 'react'
 import Layout from '../Layout/Layout'
+import { Box, Button, IconButton } from '@mui/material';
+import Link from 'next/link';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import HouseIcon from '@mui/icons-material/House';
+import SVGIcons from '../Components/SVGIcons';
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import Avatar from '@mui/material/Avatar';
+import User from '../Components/Images/Ellipse 26 (2).png'
+import Image from 'next/image';
+import { Swiper_Component2 } from '../Components/Swiper/Swiper_Component';
+import { useSelector } from 'react-redux';
+import { Card_Liked } from '../Components/Swiper/Card';
 
-interface Props {
+interface Props { }
 
-}
+const Liked = () => {
 
-const Liked = (props: Props) => {
+    const arr = useSelector(state => state.liked.liked)
+
     return (
         <>
             <Head>
@@ -15,7 +28,120 @@ const Liked = (props: Props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout>
-                
+                <Box padding={'0px 36px'} paddingBottom={'100px'}>
+                    <Box maxWidth='100%' marginTop='45px'>
+                        <Box display='flex'
+                            alignItems='center' width="100%" height="50px" margin="7px 0 3px" color={'#686877'} fontWeight={'400'}>
+                            <IconButton
+                                style={{ padding: '3px 0 0' }}
+                                color="primary" aria-label="upload picture" component="label">
+                                <Link style={{ color: '#B7B8C5' }} className='pathBtn' href="/">
+                                    <HouseIcon />
+                                </Link>
+                            </IconButton>
+                            <NavigateNextIcon style={{ fontSize: '22px', textAlign: 'center', height: '100%', paddingTop: '2px', fontWeight: '300', color: '#686877' }} />
+                            <h3>
+                                <Link
+                                    className='pathBtn'
+                                    href="/Search">Каталог
+                                </Link>
+                            </h3>
+                            <NavigateNextIcon
+                                style={{ fontSize: '22px', textAlign: 'center', height: '100%', paddingTop: '2px', fontWeight: '300', color: '#686877' }}
+                            />
+                            <h3>
+                                <Link
+                                    className='pathBtn'
+                                    href="/">Детские коляски</Link>
+                            </h3>
+                            <NavigateNextIcon
+                                style={{ fontSize: '22px', textAlign: 'center', height: '100%', paddingTop: '2px', fontWeight: '300', color: '#686877' }}
+                            />
+                            <h3>
+                                <Link
+                                    className='pathBtn'
+                                    href="/">Коляски-трости</Link>
+                            </h3>
+                        </Box>
+                    </Box>
+
+                    <Box display={'flex'} gap={'30px'} paddingTop={'45px'}>
+                        <Box minWidth={'290px'} height={'100%'} display={'flex'} flexDirection={'column'} borderRadius={'15px'} border={'1px solid #74CCD8'}>
+                            <Box width={'100%'} height={'251px'} display={'flex'} flexDirection={'column'} gap={'20px'} textAlign={'center'} paddingTop={'30px'}>
+                                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'15px'}>
+                                    <Image width={100} height={100} src={User} alt='user' />
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <SVGIcons icon='Photo_camera' />
+                                        <span style={{ color: '#686877', fontSize: '13px', cursor: 'pointer' }}>Изменить</span>
+                                    </div>
+                                </Box>
+                                <span style={{ width: '192px', margin: '0px auto', fontWeight: '500', color: '#090F24' }}>Иванова Иванна Ивановна</span>
+                            </Box>
+
+                            <Box width={'100%'} height={'220px'} display={'flex'} flexDirection={'column'} fontFamily={'Noto Sans'}>
+                                <Link href={'/Cabinet'}>
+                                    <Box width={'100%'} height={'53px'} borderTop={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} gap={'12px'} paddingLeft={'25px'}>
+                                        <SVGIcons icon='Cabiner_icon' />
+                                        <span style={{ fontSize: '16px' }}>Мои заказы</span>
+                                    </Box>
+                                </Link>
+
+                                <Link href={'/Liked'}>
+                                    <Box width={'100%'} height={'53px'} borderTop={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} gap={'12px'} paddingLeft={'27px'} bgcolor={'#74CCD8'} color={'white'}>
+                                        <SVGIcons icon='Cabiner_icon2' />
+                                        <span style={{ fontSize: '16px' }}>Список желаний</span>
+                                    </Box>
+                                </Link>
+
+                                <Link href={'#'}>
+                                    <Box width={'100%'} height={'53px'} borderTop={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} gap={'12px'} paddingLeft={'20px'}>
+                                        <SVGIcons icon='Cabiner_icon3' />
+                                        <span style={{ fontSize: '16px' }}>Акции и скидки</span>
+                                    </Box>
+                                </Link>
+
+                                <Link href={'#'}>
+                                    <Box width={'100%'} height={'53px'} borderTop={'1px solid #74CCD8'} display={'flex'} alignItems={'center'} gap={'12px'} paddingLeft={'25px'}>
+                                        <SVGIcons icon='Cabiner_icon4' />
+                                        <span style={{ fontSize: '16px' }}>Настройки профиля</span>
+                                    </Box>
+                                </Link>
+                            </Box>
+                        </Box>
+
+                        {
+                            arr.length === 0 ? (
+                                <Box width={'434px'} height={'300px'} display={'flex'} flexDirection={'column'} gap={'10px'} alignItems={'center'} margin={'0px auto'} marginTop={'100px'} marginLeft={'400px'}>
+                                    <Box display={'flex'} flexDirection={'column'} gap={'20px'} alignItems={'center'}>
+                                        <SVGIcons icon='length_liked' />
+                                        <span style={{ color: '#090F24', fontWeight: '600', fontSize: '22px' }}>У вас пока нет списка пожеланий</span>
+                                    </Box>
+
+                                    <Box>
+                                        <span style={{ color: '#828282', fontSize: '18px' }}>Самое время это исправить и создать свой первый список из широкого ассортимента наших товаров ;)</span>
+                                    </Box>
+
+                                    <Link href={'/'}>
+                                        <Button sx={{ marginTop: '10px', width: '200px', height: '48px', bgcolor: '#74CCD8', color: 'white', borderRadius: '25px', textTransform: 'inherit' }}>Смотреть каталог</Button>
+                                    </Link>
+                                </Box>
+                            ) : (
+                                <Box display={'flex'} flexDirection={'column'} gap={'30px'}>
+                                    <span style={{ color: '#090F24', fontWeight: '700', fontSize: '22px' }}>Список моих желаний</span>
+                                    <Box width={'100%'}>
+                                        <Box display={'flex'} flexWrap={'wrap'} gap={'26px'}>
+                                            {
+                                                arr.map(item => <Card_Liked key={item.id} Img={item.Image} item={item} title={item.title} top={item.top} discount={item.discount} New={item.New} />)
+                                            }
+                                        </Box>
+                                    </Box>
+                                </Box>
+                            )
+                        }
+
+
+                    </Box>
+                </Box>
             </Layout>
         </>
     )
