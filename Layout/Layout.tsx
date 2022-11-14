@@ -9,7 +9,7 @@ interface Props {}
 
 const Layout = ({ children }) => {
     let user = []
-    const state = useSelector(state => state.amount)
+    const state = useSelector((state:any) => state.amount)
 
     return (
         <div>

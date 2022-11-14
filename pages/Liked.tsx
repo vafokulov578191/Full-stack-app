@@ -8,13 +8,13 @@ import HouseIcon from '@mui/icons-material/House';
 import SVGIcons from '../Components/SVGIcons';
 import User from '../Components/Images/Ellipse 26 (2).png'
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Card_Liked } from '../Components/Swiper/Card';
 
 interface Props { }
 
 const Liked = () => {
-    const liked = useSelector(state => state.liked)
+    const liked = useSelector((state:any) => state.liked)
     
     return (
         <>
