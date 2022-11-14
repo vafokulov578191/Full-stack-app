@@ -1,25 +1,21 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../Layout/Layout'
 import { Box, Button, IconButton } from '@mui/material';
 import Link from 'next/link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import HouseIcon from '@mui/icons-material/House';
 import SVGIcons from '../Components/SVGIcons';
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-import Avatar from '@mui/material/Avatar';
 import User from '../Components/Images/Ellipse 26 (2).png'
 import Image from 'next/image';
-import { Swiper_Component2 } from '../Components/Swiper/Swiper_Component';
 import { useSelector } from 'react-redux';
 import { Card_Liked } from '../Components/Swiper/Card';
 
 interface Props { }
 
 const Liked = () => {
-
-    const arr = useSelector(state => state.liked.liked)
-
+    const liked = useSelector(state => state.liked)
+    
     return (
         <>
             <Head>
@@ -110,7 +106,7 @@ const Liked = () => {
                         </Box>
 
                         {
-                            arr.length === 0 ? (
+                            liked.length === 0 ? (
                                 <Box width={'434px'} height={'300px'} display={'flex'} flexDirection={'column'} gap={'10px'} alignItems={'center'} margin={'0px auto'} marginTop={'100px'} marginLeft={'400px'}>
                                     <Box display={'flex'} flexDirection={'column'} gap={'20px'} alignItems={'center'}>
                                         <SVGIcons icon='length_liked' />
@@ -131,14 +127,13 @@ const Liked = () => {
                                     <Box width={'100%'}>
                                         <Box display={'flex'} flexWrap={'wrap'} gap={'26px'}>
                                             {
-                                                arr.map(item => <Card_Liked key={item.id} Img={item.Image} item={item} title={item.title} top={item.top} discount={item.discount} New={item.New} />)
+                                                liked.map(item => <Card_Liked key={item.id} Img={item.Image} item={item} title={item.title} top={item.top} discount={item.discount} New={item.New} />)
                                             }
                                         </Box>
                                     </Box>
                                 </Box>
                             )
                         }
-
 
                     </Box>
                 </Box>

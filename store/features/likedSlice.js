@@ -3,7 +3,7 @@ import {
 } from "@reduxjs/toolkit";
 
 export const likedSlice = createSlice({
-    name: 'Liked',
+    name: 'liked',
     initialState: {
         liked: [],
         amount: 0

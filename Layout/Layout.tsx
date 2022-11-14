@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, IconButton, Stack, Typography } from '@mui/material'
 import SVGIcons from '../Components/SVGIcons'
 import Link from 'next/link'
 import AccountMenu from '../Components/AccountMenu';
 import { useSelector } from 'react-redux';
 
-type Props = {}
+interface Props {}
 
 const Layout = ({ children }) => {
     let user = []
-
+    const state = useSelector(state => state.amount)
 
     return (
         <div>
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
                                 <div style={{ cursor: 'pointer', position: 'relative' }}>
                                     <SVGIcons icon='Liked' />
                                     <div style={{ width: '19px', height: '19px', position: 'absolute', borderRadius: '100%', background: '#ED9BC1', fontSize: '10.50px', textAlign: 'center', top: '-8px', left: '14px' }}>
-                                        <span style={{ color: 'white', position: 'relative', top: '2px' }}>{`${1}`}</span>
+                                        <span style={{ color: 'white', position: 'relative', top: '2px' }}>{state}</span>
                                     </div>
                                 </div>
                             </Link>

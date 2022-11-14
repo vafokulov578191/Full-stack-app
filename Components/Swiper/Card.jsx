@@ -48,7 +48,6 @@ export const Card = ({ Img, title, isLike = false, item }) => {
 export const All_card = ({ Img, title, discount, top, New, item, isLike = false, lev = false }) => {
     const [like, setLike] = useState(isLike);
     const dispatch = useDispatch();
-    const state = useSelector(state => state.liked.liked)
     const handleLike = () => {
         dispatch(likedProduct(item));
         setLike(!like);
