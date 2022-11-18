@@ -5,12 +5,12 @@ import Link from 'next/link'
 import AccountMenu from '../Components/AccountMenu';
 import { useSelector } from 'react-redux';
 
-interface Props {}
+interface Props { }
 
 const Layout = ({ children }) => {
     let user = []
-    const state = useSelector((state:any) => state.amount)
-
+    const state = useSelector((state: any) => state.liked.amount)
+    
     return (
         <div>
             <Box width={'100%'} height={'120px'}>

@@ -6,15 +6,18 @@ import Link from 'next/link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import HouseIcon from '@mui/icons-material/House';
 import SVGIcons from '../Components/SVGIcons';
-import User from '../Components/Images/Ellipse 26 (2).png'
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
 import { Card_Liked } from '../Components/Swiper/Card';
+import people from '../Components/Images/Ellipse 26 (2).png'
 
-interface Props { }
+interface Props {
+    people: any
+ }
 
-const Liked = () => {
-    const liked = useSelector((state:any) => state.liked)
+const Liked = (Props: Props) => {
+    const liked = useSelector((state:any) => state.liked.liked)
+    console.log(Props);
     
     return (
         <>
@@ -65,7 +68,7 @@ const Liked = () => {
                         <Box minWidth={'290px'} height={'100%'} display={'flex'} flexDirection={'column'} borderRadius={'15px'} border={'1px solid #74CCD8'}>
                             <Box width={'100%'} height={'251px'} display={'flex'} flexDirection={'column'} gap={'20px'} textAlign={'center'} paddingTop={'30px'}>
                                 <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'15px'}>
-                                    <Image width={100} height={100} src={User} alt='user' />
+                                    <Image width={100} height={100} src={people} alt='user' />
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                         <SVGIcons icon='Photo_camera' />
                                         <span style={{ color: '#686877', fontSize: '13px', cursor: 'pointer' }}>Изменить</span>
